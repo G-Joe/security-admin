@@ -1,0 +1,103 @@
+@use "src/styles/partials/colors";
+
+.sidebar-wrapper {
+  position: relative;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: colors.$white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px 0 200px;
+  position: fixed;
+  left: 0;
+  top: 88px;
+  bottom: 0;
+  z-index: 998;
+  height: 100%;
+  overflow: scroll;
+
+  .cancel-img {
+    display: none;
+  }
+}
+
+.sidebar .sidebar-menu a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  list-style-type: none;
+  color: colors.$grey_400;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  padding: 12px 0px 11px 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-left-width: 5px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-color: transparent;
+  padding-right: 15px;
+
+  &.disabled {
+    pointer-events: painted;
+  }
+
+  .first {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sidebar-children {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+
+  &-item {
+    a {
+      margin-bottom: 0 !important;
+      color: colors.$grey_400 !important;
+      font-size: 14px !important;
+
+      &.active,
+      &:hover {
+        color: colors.$secondary !important;
+      }
+    }
+  }
+}
+
+.sidebar .sidebar-menu a:hover,
+.sidebar .sidebar-menu a.active {
+  color: colors.$secondary;
+  background-color: colors.$grey_200;
+
+  border-radius: 5px 0px 0px 5px;
+  border-color: colors.$secondary;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left-width: 5px;
+
+  .icon-logo {
+    fill: colors.$secondary;
+  }
+}
+
+.icon-logo {
+  padding-right: 16px;
+  width: max-content;
+  fill: colors.$grey_600;
+}
+
+.child-active {
+  background-color: transparent !important;
+  border: none !important;
+}

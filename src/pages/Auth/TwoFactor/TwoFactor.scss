@@ -1,0 +1,80 @@
+@use "src/styles/partials/colors";
+
+form {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 48px 100px rgba(17, 12, 46, 0.15);
+  width: 825px;
+  padding: 38px 33px 24px 24px;
+  display: flex;
+  gap: 10px;
+  background-color: colors.$white;
+
+  .welcome-header {
+    font-weight: 500;
+    color: colors.$secondary;
+  }
+
+  .form-left {
+    width: 45%;
+    margin-right: 48px;
+  }
+
+  .form-right {
+    width: 45%;
+
+    .progress-status {
+      font-size: 10px;
+      margin-top: -10px;
+      color: colors.$red;
+    }
+    .ant-progress-inner {
+      height: 4px !important;
+    }
+
+    .two-factor-instruction {
+      color: colors.$grey_300;
+      font-weight: 400;
+      margin: -10px 0px 26px 0px;
+    }
+
+    .auth-instruction{
+      color: colors.$grey_300;
+      font-weight: 400;
+      margin: 20px 0px 0px 0px;
+      line-height: 24px;
+      font-size: 14px;
+    }
+
+    .steps{
+      margin: 25px 0px 8px 0px;
+      color: colors.$black;
+      font-weight: 400;
+      font-size:14px;
+      line-height: 24px;
+    }
+    .bottom{
+      margin-top: -20px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 16px !important;
+  }
+
+  .forgot-text {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &.signin button {
+    margin: 20px 0;
+    box-shadow: 0px 8px 24px -4px rgba(43, 217, 199, 0.4);
+  }
+}
+
+.signin {
+  .form-group label {
+    background-color: colors.$white;
+  }
+}

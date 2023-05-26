@@ -1,0 +1,93 @@
+@use "./partials/vars";
+@use "./partials/colors";
+@use "./partials/mixins";
+
+@import "./partials/defaults";
+@import "./ant/index";
+
+#root,
+main {
+  position: relative;
+  min-height: 100vh;
+  // top: 51px;
+}
+
+.page-wrapper {
+  display: flex;
+  overflow: hidden;
+  padding-top: 98px;
+  padding-left: 269px;
+  height: 100%;
+
+  .layout {
+    margin-top: 33px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .main-fit {
+      padding-right: 109px;
+    }
+  }
+}
+
+.landing {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  // top: -85px !important;
+
+  .left {
+    background-image: url("../assets/images/onboard_img.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+
+    .welcome-header-primary {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 36px;
+      color: colors.$primary;
+    }
+
+    .welcome-header-secondary {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 12px;
+      font-weight: 500;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: colors.$grey_800;
+      height: 100vh;
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        p {
+          color: colors.$grey_500;
+          font-size: 14px;
+          line-height: 24px;
+          font-weight: 500;
+
+          a {
+            color: colors.$primary;
+          }
+        }
+      }
+    }
+  }
+}

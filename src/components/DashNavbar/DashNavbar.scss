@@ -1,0 +1,156 @@
+@use "src/styles/partials/colors";
+
+nav.dash {
+  background-color: colors.$white;
+  padding: 0 123px;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+    0px 6px 24px rgba(0, 0, 0, 0.05);
+
+  .dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 102px;
+
+    &-left {
+      display: flex;
+      gap: 80px;
+    }
+
+    .dash-left {
+      position: relative;
+      display: flex;
+      gap: 24px;
+      left: 15px;
+
+      .burger-icon {
+        margin-top: 14px;
+        cursor: pointer;
+      }
+
+      .form-group {
+        width: 314px;
+        
+        Input{
+          border:none;
+          background-color: colors.$primary_light !important;
+        }
+      }
+    }
+
+    .logo-icon {
+      position: absolute;
+      top: 16px;
+      left: 52px;
+      width: 70px;
+    }
+
+    img.bell-icon {
+      width: 38px;
+      cursor: pointer;
+    }
+
+    img.ngn-icon {
+      width: 21px;
+      cursor: pointer;
+    }
+
+    .nav-profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 0 7px;
+      height: 102px;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: colors.$grey_800;
+        letter-spacing: 0.4px;
+        font-weight: 500;
+      }
+
+      img.sam-img {
+        width: 50px;
+      }
+    }
+
+    .dash-nav-right {
+      display: flex;
+      gap: 25px;
+
+      .sign-out{
+        margin-top: 5px;
+        color: colors.$secondary;
+      }
+    }
+
+    &-items {
+      display: flex;
+      gap: 16px;
+    }
+
+    &-item {
+      color: colors.$grey_800;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.notification{
+  padding: 12px 16px 18px 15px;
+  .cont{
+    display: flex;
+    margin-bottom: 20px;
+    .img{
+      margin-top: 20px;
+      margin-right:8px;
+    }
+    h3{
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .description{
+      color: colors.$grey_300;
+      font-weight: 400;
+    }
+    .time{
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+
+  .view-notification{
+    text-align: center;
+    color: colors.$primary;
+    background-color: colors.$primary_light;
+    padding: 12px 0px;
+    border-radius: 4px;
+    font-weight: 500;
+
+    a:hover{
+      color: colors.$primary;
+    }
+  }
+}
+
+.ant-notification-notice.ant-notification-notice-closable .ant-notification-notice-message{
+  background-color: colors.$blue_800;
+  padding: 21px 0px 21px 15px;
+  color: colors.$white;
+  font-size: 24px;
+}
+.ant-notification-notice .ant-notification-notice-close{
+  color: colors.$white;
+}

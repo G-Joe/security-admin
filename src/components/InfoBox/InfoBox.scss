@@ -1,0 +1,47 @@
+@use "src/styles/partials/colors";
+
+.infobox {
+  margin: 25px 0;
+  width: 100%;
+  background-color: colors.$grey_200;
+  color: colors.$grey_500;
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 15px 18px;
+  cursor: pointer;
+  user-select: none;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+  }
+
+  &-details {
+    margin-bottom: 15px;
+
+    hr {
+      margin: 8px 0;
+      border: none;
+      border-top: 1px solid #616161;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 7px;
+
+      p {
+        color: colors.$grey_800;
+      }
+    }
+
+    &-circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: colors.$primary;
+    }
+  }
+}
