@@ -1,0 +1,132 @@
+@use "src/styles/partials/vars";
+@use "src/styles/partials/colors";
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+  position: relative;
+  top: 15px;
+  padding-bottom: 15px;
+
+  label {
+    font-weight: vars.$regular;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    color: colors.$grey_500;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    z-index: 998;
+    background-color: #fff;
+    padding: 0 5px;
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    .vector-img {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      right: 0;
+
+    }
+
+    .info-icon {
+      position: absolute;
+      right: 0;
+      top: -20px;
+      width: 16px;
+    }
+
+    .ngn-icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin-left: 20px;
+      display: none;
+
+      &-show {
+        display: block;
+      }
+    }
+
+    &.ngn-icon {
+      input {
+        padding-left: 40px;
+      }
+    }
+
+    input,
+    select{
+      height: 48px;
+      border: 1px solid #dcd6e2;
+      border-radius: 4px;
+      padding-left: 16px;
+      width: 100%;
+      background-color: colors.$grey_100;
+      background-color: transparent !important;
+
+    
+
+      &:focus {
+        outline: none;
+        border-color: colors.$primary;
+      }
+
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+
+    .file {
+      height: 48px;
+      border: 1px solid #dcd6e2;
+      border-radius: 4px;
+      width: 100%;
+      background-color: transparent;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+
+      img {
+        width: 22px;
+      }
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    &.select:after {
+      content: "▼";
+      font-size: 0.8rem;
+      top: 14px;
+      right: 10px;
+      position: absolute;
+      color: colors.$grey_300;
+      pointer-events: none;
+      cursor: pointer;
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+// .form-group .select select::-ms-expand{
+//   display: none;
+//   background-color: red;
+// }
+

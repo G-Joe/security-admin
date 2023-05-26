@@ -1,0 +1,40 @@
+@use "../partials/vars";
+@use "../partials/colors";
+
+.ant-steps {
+  .ant-steps-item-wait .ant-steps-item-icon {
+    background-color: colors.$primary_light;
+    border-color: transparent;
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon {
+    background-color: colors.$primary;
+    border-color: colors.$primary;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+    color: colors.$white;
+    font-weight: 700;
+    font-style: bold !important;
+  }
+
+  .ant-steps-item-finish
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title::after {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .ant-steps-item-process .ant-steps-item-icon {
+    background-color: colors.$primary_light;
+    border-color: transparent;
+  }
+
+  .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
+    color: colors.$primary;
+  }
+}

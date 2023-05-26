@@ -1,0 +1,39 @@
+@use "src/styles/partials/colors";
+
+.select-wrapper {
+  background-color: colors.$white;
+  padding: 14px 8px;
+  border-radius: 5px;
+  margin: 25px 0px;
+
+  .dropdown{
+    position:absolute;
+    margin-left: -20px;
+    padding-top: 12px;
+  }
+}
+
+.form-group .input-wrapper input, .form-group .input-wrapper select{
+  background-color: colors.$white;
+}
+
+
+.select-dropdown {
+  background: colors.$white;
+  border-radius: 5px;
+  padding: 5px 0;
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: colors.$grey_800;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+

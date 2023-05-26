@@ -1,0 +1,14 @@
+@use "src/styles/partials/colors";
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: colors.$white;
+  z-index: 999;
+  padding: 0 109px 0 242px;
+  height: 92px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

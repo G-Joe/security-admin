@@ -1,0 +1,77 @@
+@use "src/styles/partials/colors";
+
+.profile{
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 25px;
+  
+      span {
+        color: colors.$primary;
+      }
+    }
+    .profile-content{
+      background: colors.$white;
+      box-shadow: 0px 0px 0 1pxpx rgba(0, 0, 0, 0.08),
+        0px 6px 24px rgba (0, 0, 0, 0.05);
+      border-radius: 10px;
+      padding: 61px 10px 18px 18px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .ant-tabs .ant-tabs-ink-bar{
+        background: colors.$primary;
+    }
+  }
+
+  .view-profile{
+    width: 340px;
+    margin: 31px 0px;
+    .action-button{
+        display: flex;
+        gap: 23px;
+    }
+  }
+
+
+  .profile-image{
+    margin-top: 11px;
+    padding: 18px 35px 45px 23px;
+    box-shadow: 0px 2px 8px rgba(99, 99, 99, 0.2);
+border-radius: 10px;
+min-height: 302px;
+
+.img{
+  text-align: center;
+  .camera-icon{
+    position: absolute;
+    margin-left: -130px;
+    margin-top: 60px;
+  }
+}
+
+h1{
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+  margin: 12px 0px 24px 0px;
+}
+p{
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+  background: colors.$primary_light;
+  padding: 6px 47px;
+}
+  }
+
+  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: colors.$primary !important;
+    font-weight: 400;
+  }
+
+  .ant-tabs-tab-btn{
+    font-weight: 400;
+    color:colors.$grey_400;
+  }

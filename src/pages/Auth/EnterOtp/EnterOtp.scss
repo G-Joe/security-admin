@@ -1,0 +1,25 @@
+@use "src/styles/partials/colors";
+
+.otp {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: colors.$grey_500;
+
+  &-input {
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid rgba(0, 0, 0, 0.25) !important;
+    border-radius: 4px !important;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    margin: 8px 0;
+
+    &-active {
+      border: 1.5px solid colors.$primary !important;
+    }
+  }
+}

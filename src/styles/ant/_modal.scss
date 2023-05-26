@@ -1,0 +1,23 @@
+@use "../partials/vars";
+@use "../partials/colors";
+
+.ant-modal {
+  width: auto !important;
+  z-index: 9999999999999 !important;
+
+  &-header,
+  &-footer,
+  &-close {
+    display: none;
+  }
+
+  &-mask {
+    z-index: 999 !important;
+  }
+
+  &-content {
+    padding: 0 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
