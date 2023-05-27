@@ -28,7 +28,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <h3>
-        Home &gt; <span>Notification</span>
+        Home &gt; <span>Profile</span>
       </h3>
       <div className="profile-content">
         <div className="profile-img">

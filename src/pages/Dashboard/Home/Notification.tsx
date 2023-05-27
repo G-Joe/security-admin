@@ -1,36 +1,40 @@
-import sam from "assets/images/sam_olu.png";
-import mercy from "assets/images/mercy_gaga.png";
+import fraud from "assets/icons/fraud.svg";
+import operations from "assets/icons/operations.svg";
 import "./home.scss"
 
 
 const data = [
     {
-      img: sam,
-      name: "Sam Olu",
+      img: fraud,
+      status: "Fraud",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
-      time: "45 Mins Ago",
+      time: "45",
+      name: "Ola Dio",
     },
     {
-      img: mercy,
-      name: "Mercy Gaga",
+      img: operations,
+      status: "Operations",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
-      time: "50 Mins Ago",
+      time: "50",
+      name: "Sam Cook",
     },
     {
-        img: sam,
-        name: "Sam Olu",
+        img: fraud,
+        status: "Fraud",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
-        time: "45 Mins Ago",
+        time: "45",
+        name: "Emma Dio",
       },
       {
-        img: mercy,
-        name: "Mercy Gaga",
+        img: operations,
+        status: "Operations",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
-        time: "50 Mins Ago",
+        time: "50",
+        name: "Joy Smart",
       },
   ];
 
@@ -48,9 +52,12 @@ const Notification = () => {
                 <img src={notifications.img} alt="notification-thumbnail"/>
               </div>
               <div className="not">
-                <h3>{notifications.name}</h3>
+                <h3>{notifications.status}</h3>
                 <p className="description">{notifications.description}</p>
-                <p className="time">{notifications.time}</p>
+                <p className="name">Reported by {notifications.name}</p>
+              </div>
+              <div className="time">
+                <p>{notifications.time} Mins Ago</p>
               </div>
             </div>
           );
