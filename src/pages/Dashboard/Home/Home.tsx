@@ -1,3 +1,6 @@
+import { useState } from "react";
+import CylinderChart from "./CylinderChart";
+import Select from "components/Input/Select";
 import Card from "components/Summary/Card";
 import Request from "assets/icons/request.svg";
 import People from "assets/icons/people.svg";
@@ -8,6 +11,11 @@ import SideNotification from "./SideNotifcation";
 import "./home.scss";
 
 const Home = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionSelected = (option: string) => {
+    setSelectedOption(option);
+  };
   return (
     <>
       <div className="top">
@@ -26,6 +34,23 @@ const Home = () => {
               background="blue"
             />
             <Card label="Groups" count="20" icon={Three} background="green" />
+          </div>
+          <div className="bar-chart">
+            <div className="title">
+              <h1>Permission</h1>
+              <div className="select">
+              <Select
+                options={["Last week", "Last month", "Last year"]}
+                onOptionSelected={handleOptionSelected}
+                label=""
+              />
+              </div>
+             
+            </div>
+            <div className="cylinder">
+            <CylinderChart/>
+            </div>
+
           </div>
         </div>
         <div className="side">

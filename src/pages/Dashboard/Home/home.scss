@@ -1,26 +1,45 @@
 @use "src/styles/partials/colors";
 
-// .top{
-//   display:flex;
-//   gap:17px;
-//   .status {
-//     .cards {
-//       display: flex;
-//       gap: 19px;
-//       margin-bottom: 53px;
-//     }
-//   }
-// }
+
 .top{
-  display:flex;
+  display: flex;
   gap:17px;
+  margin-bottom: 53px;;
   .status{
+    width:70%;
     .cards{
       display: flex;
       gap: 19px;
+      margin-bottom: 53px;
+    }
+    .bar-chart{
+      background-color: colors.$white;
+      padding: 44px 31px 32px 43px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      .title{
+        display: flex;
+        justify-content: space-between;
+
+        h1{
+          font-weight: 400;
+          font-size: 20px;
+        }
+        .select{
+          width: 150px;
+          margin-top:-10px;
+          height:45px;
+
+        }
+      }
+      .cylinder{
+        height: 285px;
+      }
     }
   }
-
+  .side{
+    width: 30%;
+  }
 }
 
 .product-cat-list {
@@ -232,10 +251,21 @@
         margin: 3px 0px;
         line-height: 18px;
       }
-      .time {
+      .name {
         font-weight: 500;
         font-size: 12px;
-        color: colors.$grey_400;
+        color: colors.$secondary;
+      }
+      .time{
+        font-weight: 500;
+        font-size: 12px;
+        color: colors.$secondary;
+        width:160px;
+        background-color: colors.$orange_100;
+        height: 36px;
+        padding:10px;
+        text-align: center;
+        border-radius: 15px;
       }
     }
   }
@@ -245,6 +275,7 @@
     // width:317px;
     background-color: colors.$white;
     border-radius: 8px;
+    padding-bottom: 16px;
 
     h1{
       font-weight: 400;
@@ -301,3 +332,8 @@
   }
 }
 }
+
+.chart-container{
+  height:100%;
+}
+

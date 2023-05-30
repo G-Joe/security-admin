@@ -8,6 +8,7 @@ import StatusModal from "components/Modal/StatusModal";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 import searchIcon from "assets/icons/search_icon.svg";
+import adminLogin from "assets/icons/admin_login.svg";
 import "../Audit.scss";
 
 const AdminAuditTrail = () => {
@@ -65,6 +66,19 @@ const AdminAuditTrail = () => {
         multiple: 3,
       },
     },
+    {
+      title: "Respond",
+      dataIndex: "Respond",
+      sorter: {
+        compare: (a: any, b: any) => a.view - b.view,
+        multiple: 1,
+      },
+      render: () => (
+        <div onClick={() => setModal2Open(true)}>
+          <p style={{ cursor: "pointer" }}>View</p>
+        </div>
+      ),
+    },
   ];
 
   const data = [
@@ -113,6 +127,7 @@ const AdminAuditTrail = () => {
   const navigate = useNavigate();
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [modal2Open, setModal2Open] = useState(false);
   const statusModal = useDisclosure();
   const confirmModal = useDisclosure();
 
@@ -137,7 +152,11 @@ const AdminAuditTrail = () => {
       <div className="header">
         <h3>Audit Trail</h3>
         <div className="action">
-          <Button variant="transparent" label="EXPORT AS CSV" onClick={() => setModalOpen(true)}/>
+          <Button
+            variant="transparent"
+            label="EXPORT AS CSV"
+            onClick={() => setModalOpen(true)}
+          />
         </div>
       </div>
       <div className="outlet-table">
@@ -154,7 +173,7 @@ const AdminAuditTrail = () => {
           <div className="date">
             <Input label="" type="date" placeholder="Select Date" />
           </div>
-          <Button label="FILTER" variant="orange"/>
+          <Button label="FILTER" variant="orange" />
         </div>
         <Table
           rowSelection={rowSelection}
@@ -173,11 +192,11 @@ const AdminAuditTrail = () => {
           style={{
             borderRadius: 10,
             padding: 20,
-          
-            width:316
+
+            width: 316,
           }}
         >
-          <br/>
+          <br />
           <h3>Please re-enter your pin to download audit log</h3>
           <br />
           <Input label="New Password" type="password" secure />
@@ -186,7 +205,41 @@ const AdminAuditTrail = () => {
           <br />
           <div className="edit-submit">
             <Button label="DOWNLOAD" variant="primary" onClick={SuccessModal} />
-          </div><br/>
+          </div>
+          <br />
+        </Modal>
+        <Modal
+          centered
+          open={modal2Open}
+          onOk={() => setModal2Open(false)}
+          onCancel={() => setModal2Open(false)}
+          className="audit-trail-modal"
+        >
+          <h3>
+            Event Type: <span>Admin Login Attempt</span>
+          </h3>
+          <div className="image">
+            <img src={adminLogin} alt="admin-login" />
+          </div>
+          <p>
+            The admin, michael@accessbankplc.com, was logged in to the Admin
+            Portal
+          </p>
+          <div className="further-details">
+            <div className="time-stamp">
+              <h3>Timestamp</h3>
+              <p>Mar 07, 2023 @ 09:27:56:91</p>
+            </div>
+            <div className="initiator">
+              <h3>Initiated By</h3>
+              <p>michael@accessbankplc.com</p>
+            </div>
+            <div className="location">
+              <h3>Location</h3>
+              <p>102.89.42.4 (client IP)</p>
+              <p>Osun state, NG; Africa Lagos</p>
+            </div>
+          </div>
         </Modal>
       </div>
       <StatusModal
